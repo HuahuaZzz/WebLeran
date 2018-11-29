@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hua's WedSite</title>
+	<!-- if lt IE9
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"> </script>
+	 -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+	<form>
+		<input list="mylists">
+
+		<datalist id="mylists">
+			<option value="IE">
+			<option value="Firefox">
+			<option value="Google Chrome">
+			<option value="Safar">
+		</datalist>
+		
+		<br><br>
+		<input type="color" name="color">
+		<br><br>
+		<input type="date" name="day">
+		<br><br>
+		<input type="email" name="email">
+		<br><br>
+		<input type="number" name="number" min="0" max="10">
+		<br><br>
+		<input type="text" name="text" value="Olny read" readonly>
+		<br><br>
+		<input type="text" name="text" value="Olny read and disabled" disabled>
+		<br><br>
+		<input type="text" name="text" value="size custome" disabled size="50">
+		<br><br>
+		<b>Input maxlength limit 10 unit </b>
+		<input type="text" name="text" value="" maxlength="10" size="10">
+	</form>
+</body>
+
+</html>
