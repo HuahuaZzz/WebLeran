@@ -19,24 +19,32 @@
 
             section {
 
-                max-width: 250px;
+                max-width: 100%;
                 /*width : 50 %*/
                 height: 200px;
                 background-color: orange;
 
             }
 
-            h1,
-            p {
-                color: white;
-            }
-
             h1 {
+                /* text-shadow: 3px 5px red;  */
+                /*字型陰影 */
                 background-color: Rgba(123, 56, 72, 0.4);
+                /*背景顏色+透明度 */
+                color: rgb(255, 233, 233);
+                 letter-spacing: 3px;  
+                /* 字體的間距 可以是負數 */
+               /* word-spacing: -10px;   每組字體 可以是負數*/ 
+
             }
 
             p {
                 background-color: mediumseagreen;
+               /* max-width: 150px;*/
+                text-align: justify;
+                /*字型對齊方式 */
+                line-height: 1;
+                /*每行間距*/
             }
 
             .myBorder1 {
@@ -44,44 +52,80 @@
         border-width: 1px 10px ;
         border-color: red; */
 
-                /* border: 5px solid purple; */
-                border-radius: 10%;
-     /*            margin-left: 100px;
+                /* border: 5px solid purple; 
+                border-radius: 10%;*/
+                /*            margin-left: 100px;
                 margin-top: 100px; */
 
                 margin-bottom: 50px;
-               
+
             }
+
             .myBorder2 {
                 /*         border-style: solid;
         border-width: 1px 10px ;
         border-color: red; */
 
-                /* border: 5px solid purple; */
-                border-radius: 10%;
-     /*            margin-left: 100px;*/
-                margin-top: 60px; 
+                /* border: 5px solid purple; 
+                border-radius: 10%;*/
+                /*            margin-left: 100px;*/
+                margin-top: 60px;
                 padding: 50px;
                 box-sizing: border-box;
                 /*margin: auto;*/
+            }
+
+/*             li {
+                display: inline;
+            } */
+            .redcolor{
+                background-color: red;
+            }
+            .align {
+                text-align: center;
+            }
+
+            a{
+                text-decoration: none;
+            }
+            .decoration{
+                /* text-decoration: overline; /*上划線*/ 
+                /*text-decoration: line-through;*/
+                text-decoration: underline; /*下划線*/
+            }
+            .myPostion{
+                position: absolute; /*fiexd 固定位置 sticky 移動拉到才會移動 relative 原始(相對)位置 absolute 絕對位置*/
+                top: 50px;
+                left: 50px;
+            }
+            .relativePostion{
+                   position: relative; 
+                   
             }
         </style>
     </head>
 
     <body>
-        <h1>Example domain</h1>
 
-        <p>This domain is established to be used for illustrative examples in documents domain in examples without
-            prior coordination or asking for permission</p>
-        <a href="">More information ...</a>
+        <div>
+            <h1>Example domain</h1>
 
-        <section class="myBorder1">  This's a test</section>
+            <p>This domain is established to be used for illustrative examples in documents domain in examples without
+                prior coordination or asking for permission</p>
 
-        <section class="myBorder2">  This's a test222</section>
+            <section class="relativePostion">
+            <section class="myBorder1 redColor myPostion">
+                <p class="align ">This's a test</p>
+            </section> </section>
+
+            <section class="myBorder2 decoration"> This's a test222</section>
+            <div style="padding-bottom: 2000px;"></div>
+            <li><a  href="#">page1</a></li>
+            <li><a href="#">page2</a></li>
+            <li><a href="#">page3</a></li>
 
 
-       
-
+        </div>
     </body>
 
     </html>
