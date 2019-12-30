@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<title>Hua's WedSite</title>
+	
+	<meta charset = "UTF-8"/>
+	<meta http-equiv= "Content-type" content = "text/html; charset = utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <style>
+#circle{
+    width: 250px;
+    height: 300px;
+    border-radius: 150Px;
+    background-color : red ;
+}
+    </style>
+        
+	
+</head>
+<body>
+    <dir id = "circle"> </dir>
+
+    <br><br><br>
+    <input id = "myInput" type = "text" value = "請輸入欲書入值">
+    <button id="myButton"> JS input 變數 練習</button>
+    <p id="text">原來的字</p>
+    
+
+
+    <script type ="text/javascript">
+
+    var myVariable = document.getElementById("myInput").value;
+
+    document.getElementById("myButton").onclick = function(){
+        myVariable = document.getElementById("myInput").value;
+        document.getElementById("text").innerHTML = myVariable;
+    }
+
+    </script>
+</body>
+	
+</html>

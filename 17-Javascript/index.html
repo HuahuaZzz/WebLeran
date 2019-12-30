@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<title>Hua's WedSite</title>
+	
+	<meta charset = "UTF-8"/>
+	<meta http-equiv= "Content-type" content = "text/html; charset = utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+</head>
+<body>
+    <!-- <button onclick="alert('u 好 阿 !')" >點案我</button>-->
+    <button id = "myButton">練習一 : 修改 text</button>
+    <p id="text">一段文字</p>
+    <p id="text2">一段文字123</p>
+    <br><br><br><br>
+
+    <button id = "myButton1">練習二 添加字串</button>
+    <p id="text3">使用jS添加的字串是: </p>
+
+    <br><br><br>
+
+    <button id = "myButton2">練習三 添加html 代碼</button>
+    <p id="text4"></p>
+
+
+
+    <script type ="text/javascript">
+
+    //alert(document.getElementById('text').innerHTML);
+    //document.getElementById('text2').innerHTML = "jS修改的文字"
+        document.getElementById("myButton").onclick = function(){
+
+            alert("已成功修改");
+            document.getElementById('text2').innerHTML = "jS修改的文字"
+        }
+
+        document.getElementById("myButton1").onclick = function(){
+            document.getElementById('text3').innerHTML = document.getElementById("text3").innerHTML + "  JS 添加的字串"
+  
+        }
+        document.getElementById("myButton2").onclick = function()
+        {
+            document.getElementById('text4').innerHTML = "<ul> <li>apple</li> <li>banana</li> <li>C.c</li> </ul>"
+            
+        }
+
+
+    </script>
+</body>
+	
+</html>
