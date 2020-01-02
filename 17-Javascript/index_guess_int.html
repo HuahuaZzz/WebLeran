@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Hua's WedSite</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset = utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<body>
+    <p>請猜猜看0~10整數
+        <br>
+        <input id="GuessInt" type="text">
+        <button id="GuessIntSub">猜猜</button>
+
+
+        <script type="text/javascript">
+
+        var x ; 
+        var guesses;
+
+        document.getElementById('GuessIntSub').onclick=function()
+        {
+            var gotIt = false;
+            var guesses = 1;
+            var x ; 
+            while(gotIt == false){
+                x = Math.random();
+                x = x * 11
+                x=Math.floor(x);
+
+                if(x == document.getElementById("GuessInt").value){
+                    gotIt = true;
+                }else{
+                    guesses ++;
+                }
+            }
+            alert("瀏覽器使用了" + guesses + "次,猜對的 答案為"+ x);
+        }
+
+        
+
+        </script>
+</body>
+
+</html>

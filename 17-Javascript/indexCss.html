@@ -1,43 +1,133 @@
 <!doctype html>
 <html>
+
 <head>
-	<title>Hua's WedSite</title>
-	
-	<meta charset = "UTF-8"/>
-	<meta http-equiv= "Content-type" content = "text/html; charset = utf-8" />
+    <title>Hua's WedSite</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset = utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <style>
-#circle{
-    width: 250px;
-    height: 300px;
-    border-radius: 150Px;
-    background-color : red ;
-}
+        #circle {
+            width: 250px;
+            height: 300px;
+            border-radius: 150Px;
+            background-color: red;
+        }
     </style>
-        
-	
+
+
 </head>
+
 <body>
-    <dir id = "circle"> </dir>
+    <dir id="circle"> </dir>
 
     <br><br><br>
-    <input id = "myInput" type = "text" value = "請輸入欲書入值">
+    <input id="myInput" type="text" value="請輸入欲書入值">
     <button id="myButton"> JS input 變數 練習</button>
     <p id="text">原來的字</p>
-    
+    <br>
+    <br>
+    <br>
+    <hr>
+    <p>今天天氣怎樣?</p> <br>
+    <input id="myInputWeather" type="text" value="晴天">
+    <button id="button_1"> 提交</button>
+    <hr>
+    <br>
+    <br>
+    <P>猜數字練習</P>
+    <p>請猜猜看0~10整數
+        <input id="GuessInt" type="text">
+        <button id="GuessIntSub">猜猜</button>
+
+    <hr>
+
+    <p id="arraystr">數組的自</p>
 
 
-    <script type ="text/javascript">
+        <script type="text/javascript">
+            // **************************
+            //               數組練習
+            // var myArray = ["Red", "green"];
 
-    var myVariable = document.getElementById("myInput").value;
+            // console.log(myArray);
+            // myArray.push("apple");
+            // console.log(myArray);
+            // myArray.splice(1, 2);
+            // console.log(myArray);
+            // myArray.splice(1, 0, "oragne");
 
-    document.getElementById("myButton").onclick = function(){
-        myVariable = document.getElementById("myInput").value;
-        document.getElementById("text").innerHTML = myVariable;
-    }
 
-    </script>
+
+            // document.getElementById("circle").onclick = function () {
+
+            // }
+
+
+            var myVariable = document.getElementById("myInput").value;
+
+            document.getElementById("myButton").onclick = function () {
+                myVariable = document.getElementById("myInput").value;
+                document.getElementById("text").innerHTML = myVariable;
+            }
+            //*******************************************************
+
+
+            // var x = 1;
+            // if (x==1){
+            //     alert("X = 1");
+            // }else{
+            //     alert( "X != 1 ");
+            // }
+            // ***********if 練習**********
+            document.getElementById('button_1').onclick = function () {
+                if (document.getElementById('myInputWeather').value == "下雨") {
+                    alert("今天下雨");
+                } else {
+                    alert("今天晴天");
+                }
+            }
+            // ****************************
+            //console.log(Math.pow(2,10)); pow 平方
+
+
+            //*****猜數字練習 ****** 
+            document.getElementById('GuessIntSub').onclick = function () {
+                //生成 1~10 整數
+                guessint = Math.random(); //取隨機數
+                guessint = guessint * 11; //呈上倍數 不然只有0~1之間的數字
+                guessint = Math.floor(guessint);  //取整數
+                console.log(guessint);
+                if (guessint == document.getElementById("GuessInt").value) {
+                    alert("對了");
+                } else {
+                    alert("錯了 答案是" + guessint);
+                }
+
+            }
+            //**************************
+
+            //for 練習
+
+            // for(var i = 0 ;i<5;i++)
+            // {
+            //     console.log(i);
+            // }
+
+            var myArraya = ["a","b","c"];
+            var VarArraystr = "";
+            for(var i =0;i<myArraya.length ; i++)
+            {
+                console.log(myArraya[i]);
+                VarArraystr = VarArraystr + myArraya[i];
+               // console.log(VarArraystr);
+            }
+            document.getElementById('arraystr').innerHTML = VarArraystr;
+
+
+        </script>
 </body>
-	
+
 </html>
